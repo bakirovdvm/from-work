@@ -1,0 +1,163 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>{% block title %} Каталог авто {% endblock %}</title>
+</head>
+<body>
+
+<!--======== Navigation ========-->
+    <nav class="navbar navbar-light navbar-expand-lg navbar-light bg-light" style="">
+      <a class="navbar-brand" href="#">my LOGO</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'car'  %}">Add car</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'car_table'  %}">All cars</a>
+              </li>
+
+            </ul>
+          </div>
+    </nav>
+
+
+
+
+
+
+
+
+<!--fixed-top d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow-->
+<!--        <div class="navbar navbar-expand-md fixed-top p-4 bg-white border-bottom ">-->
+<!--          <h5 class="my-0 mr-md-auto font-weight-normal">LOGO pic</h5>-->
+
+<!--          <nav class="my-2 my-md-0 mr-md-3">-->
+<!--              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--              </button>-->
+<!--              <a class="p-2 text-dark" href="{% url 'home' %}">Home</a>-->
+<!--              <a class="p-2 text-dark" href="{% url 'car' %}">Your auto</a>-->
+
+<!--          </nav>-->
+<!--        </div>-->
+<!--/////////////////////////////////-->
+<!--     <nav class="navbar navbar-expand-md navbar-dark bg-dark p-4 navbar-fixed-top">-->
+<!--        <a class="navbar-brand" href="{% url 'home' %}">LOGO pic</a>-->
+<!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--          <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--        <div class="collapse navbar-collapse" id="navbarCollapse">-->
+<!--          <ul class="navbar-nav navbar-right">-->
+<!--            <li class="nav-item active">-->
+<!--              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>-->
+<!--            </li>-->
+<!--            <li class="nav-item active">-->
+<!--              <a class="nav-link" href="{% url 'car' %}">Your auto</a>-->
+<!--            </li>-->
+
+<!--          </ul>-->
+
+<!--        </div>-->
+<!--      </nav>-->
+
+<!--     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark p-4 ">-->
+<!--        <a class="navbar-brand" href="#">Carousel</a>-->
+<!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--          <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--        <div class="collapse navbar-collapse" id="navbarCollapse">-->
+<!--          <ul class="navbar-nav mr-auto">-->
+<!--            <li class="nav-item active">-->
+<!--              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+<!--            </li>-->
+<!--            <li class="nav-item active">-->
+<!--              <a class="nav-link" href="#">Link</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item active">-->
+<!--              <a class="nav-link" href="#">Disabled</a>-->
+<!--            </li>-->
+<!--          </ul>-->
+
+<!--        </div>-->
+<!--      </nav>-->
+
+
+
+<!--======== Content ========-->
+
+
+        <div class="row">
+            {% block form %} {% endblock %}
+        </div>
+        <div class="row">
+            {% block table_car_list %} {% endblock %}
+        </div>
+
+<!--======== experiment block ========-->
+    {% block home %}{% endblock %}
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script>
+            $(document).ready( function () {
+                $('#car_table').DataTable();
+            } );
+
+
+
+    </script>
+</body>
+
+
+
+
+
+
+<!--    <script type = "text/javascript">-->
+<!--        $(document).ready(function(){-->
+<!--                $("a.nav-link").click(function(){-->
+<!--                    $("html, body").animate ({-->
+<!--                        scrollTop: $($(this).attr("href")).offset().top + "px"-->
+<!--                        },{-->
+<!--                        duration: 1000,-->
+<!--                        easing: "swing"-->
+<!--                    });-->
+<!--                    return false;-->
+<!--                });-->
+<!--            }-->
+<!--        );-->
+<!--    </script>-->
+
+</body>
+</html>

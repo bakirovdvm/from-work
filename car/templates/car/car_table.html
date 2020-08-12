@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Страница всех машин {% endblock %}
+
+
+
+{% block table_car_list %}
+
+<div class="container">
+
+    <center><h1 class="p-3">Ваши добавленные автомобили</h1></center>
+
+    <a href="{% url 'car'  %}" class="btn btn-primary btn-lg btn-block" role="button">Добавить новую машину</a>
+
+    <br><br>
+
+    <div class="table-response">
+        <table id="car_table" class="table table-striped">
+          <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Марка авто</th>
+                <th scope="col">Модель авто</th>
+                <th scope="col">Год выпуска авто</th>
+                <th scope="col">Цвет авто</th>
+                <th scope="col">Длина</th>
+                <th scope="col">Ширина</th>
+                <th scope="col">Высота</th>
+                <th scope="col">Клиренс</th>
+            </tr>
+          </thead>
+          <tbody>
+                {% for car in cars %}
+            <tr>
+
+                    <th scope="row"></th>
+                    <td scope="row">{{ car.name_auto }}</td>
+                    <td scope="row">{{ car.model_auto }}</td>
+                    <td scope="row">{{ car.year }}</td>
+                    <td scope="row">{{ car.color }}</td>
+                    <td scope="row">{{ car.lenght }}</td>
+                    <td scope="row">{{ car.width }}</td>
+                    <td scope="row">{{ car.height }}</td>
+                    <td scope="row">{{ car.clearance }}</td>
+
+            </tr>
+                {% endfor %}
+          </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
