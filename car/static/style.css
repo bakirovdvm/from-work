@@ -2,22 +2,16 @@
     height: 600px;
     background: #1abc9c;
     position: relative;
-
-
 }
 
-
-  p {font-size: 16px;}
+p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
-
-
 
 #section-1{
     background-color: #1abc9c; /* Green */
     color: #ffffff;
     padding-top: 100px;
     padding-bottom: 100px;
-
 }
 
 #section-2{
@@ -27,16 +21,22 @@
     padding-bottom: 100px;
 }
 
-
-  .bg-3 {
+.bg-3 {
     background-color: #ffffff; /* White */
     color: #555555;
-  }
-  .bg-4 {
+}
+.bg-4 {
     background-color: #2f2f2f; /* Black Gray */
     color: #fff;
-  }
- /* .container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }*/
+}
+
+#navbar{
+    //padding: 10px;
+    font-size: 1.3em;
+}
+
+.navbar-brand{
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
