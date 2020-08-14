@@ -9,6 +9,8 @@ from .forms import CarForm
 def home(request):
     return render(request, ('car/home.html'))
 
+def css_animation(request):
+    return render(request, ('car/css_animation.html'))
 
 def car(request):
     cars = Car.objects.all()

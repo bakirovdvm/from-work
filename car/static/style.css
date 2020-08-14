@@ -1,11 +1,25 @@
+.navbar{
+    margin-bottom: 0;
+    border-radius: 0;
+    padding: 10px
+}
+
+#navbar{
+    font-size: 1.3em;
+}
+
+.navbar-brand{
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
 .pr-item{
     height: 600px;
     background: #1abc9c;
     position: relative;
+    margin-top:0;
 }
 
-p {font-size: 16px;}
-  .margin {margin-bottom: 45px;}
 
 #section-1{
     background-color: #1abc9c; /* Green */
@@ -21,22 +35,8 @@ p {font-size: 16px;}
     padding-bottom: 100px;
 }
 
-.bg-3 {
-    background-color: #ffffff; /* White */
-    color: #555555;
-}
-.bg-4 {
-    background-color: #2f2f2f; /* Black Gray */
-    color: #fff;
+
 }
 
-#navbar{
-    //padding: 10px;
-    font-size: 1.3em;
-}
 
-.navbar-brand{
-    font-weight: 700;
-    font-size: 1.3em;
-}
 
