@@ -36,3 +36,63 @@
 .portfolio li:hover .description{
     opacity: 1;
 }
+
+
+
+.block{
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+
+}
+
+.circle{
+    background: #3d3d3d;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    color: #fff;
+    line-height: 200px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.4em;
+    text-shadow: 1px 1px 1px #111;
+    position: relative;
+}
+
+.circle span{
+    position: relative;
+    z-index: 2;
+}
+
+.circle::after{
+    content: "";
+    width: 202px;
+    height: 202px;
+    background: #1dbfbf;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: 1;
+    transition: 0.5s;
+
+}
+
+.circle:hover::after{
+    width: 0;
+    height: 0;
+    left: 100px;
+    top: 100px;
+    filter: blur(20px);
+}
+
+.text{
+    color %555;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+h3{text-align: center;}

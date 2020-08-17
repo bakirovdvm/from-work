@@ -13,30 +13,25 @@
     font-size: 1.3em;
 }
 
-.pr-item{
-    height: 600px;
-    background: #1abc9c;
+#section-1{
+    min-height: 650px;
+    background: rgba(238,238,238, .1);
     position: relative;
-    margin-top:0;
 }
 
-
-#section-1{
-    background-color: #1abc9c; /* Green */
-    color: #ffffff;
-    padding-top: 100px;
-    padding-bottom: 100px;
+.slider{
+    width: 100%;
 }
 
 #section-2{
+    min-height: 750px;
     background-color: #474e5d; /* Dark Blue */
     color: #ffffff;
-    padding-top: 100px;
+    padding-top: 200px;
     padding-bottom: 100px;
 }
 
 
-}
 
 
 

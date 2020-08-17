@@ -12,6 +12,9 @@ def home(request):
 def css_animation(request):
     return render(request, ('car/css_animation.html'))
 
+def css_animation_ex(request):
+    return render(request, ('car/css_animation_ex.html'))
+
 def car(request):
     cars = Car.objects.all()
     form = CarForm(request.POST or None)
