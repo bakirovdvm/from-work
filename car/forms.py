@@ -6,7 +6,7 @@ from .models import Car
 class CarForm(forms.ModelForm):
     class Meta:
         model = Car
-        fields = ['name_auto', 'model_auto', 'year', 'color', 'lenght', 'width', 'height', 'clearance']
+        fields = ['name_auto', 'model_auto', 'year', 'color', 'length', 'width', 'height', 'clearance', 'engine_capacity', 'transmission']
         #exclude = ['']
         widgets = {
             'name_auto': TextInput(attrs={
@@ -21,11 +21,19 @@ class CarForm(forms.ModelForm):
                 'class': 'form-control',
                 'placeholder': 'Введите год выпуска автомобиля',
             }),
+            'engine_capacity': TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Введите объем двигателя',
+            }),
+            'transmission': TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Введите тип коробки переключения передач',
+            }),
             'color': TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Введите цвет автомобиля',
             }),
-            'lenght': TextInput(attrs={
+            'length': TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Введите длину автомобиля',
             }),
@@ -41,7 +49,7 @@ class CarForm(forms.ModelForm):
                 'class': 'form-control',
                 'placeholder': 'Введите клиренс автомобиля',
             }),
-        }
 
+        }
 
 

@@ -22,12 +22,15 @@
                 <th scope="col">#</th>
                 <th scope="col">Марка авто</th>
                 <th scope="col">Модель авто</th>
-                <th scope="col">Год выпуска авто</th>
+                <th scope="col">Год выпуска</th>
+                <th scope="col">Объем двигателя</th>
+                <th scope="col">ККП</th>
                 <th scope="col">Цвет авто</th>
                 <th scope="col">Длина</th>
                 <th scope="col">Ширина</th>
                 <th scope="col">Высота</th>
                 <th scope="col">Клиренс</th>
+
             </tr>
           </thead>
           <tbody>
@@ -37,12 +40,16 @@
                     <th scope="row">{{ car.id }}</th>
                     <td scope="row"><a href="{% url 'car_detail' car.id %}">{{ car.name_auto }}</a></td>
                     <td scope="row">{{ car.model_auto }}</td>
-                    <td scope="row">{{ car.year }}</td>
-                    <td scope="row">{{ car.color }}</td>
-                    <td scope="row">{{ car.lenght }}</td>
-                    <td scope="row">{{ car.width }}</td>
-                    <td scope="row">{{ car.height }}</td>
-                    <td scope="row">{{ car.clearance }}</td>
+                    <td scope="row"><center>{{ car.year }}</center></td>
+                    <td scope="row"><center>{{ car.engine_capacity }}</center></td>
+                    <td scope="row"><center>{{ car.transmission }}</center></td>
+                    <td scope="row"><center>{{ car.color }}</center></td>
+                    <td scope="row"><center>{{ car.length }}</center></td>
+                    <td scope="row"><center>{{ car.width }}</center></td>
+                    <td scope="row"><center>{{ car.height }}</center></td>
+                    <td scope="row"><center>{{ car.clearance }}</center></td>
+
+
 
             </tr>
                 {% endfor %}
@@ -50,5 +57,7 @@
         </table>
     </div>
 </div>
+
+
 
 {% endblock %}

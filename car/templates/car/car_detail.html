@@ -10,12 +10,27 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2"></div>
+            <div class="col-md-4"><h1 id="car_name_page">{{ car.name_auto }} {{ car.model_auto }} - {{ car.year }}</h1></div>
+            <div class="col-md-4"></div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
 
             <div class="col-md-4">
-                <h1>{{ car.name_auto }} {{ car.model_auto }} - {{ car.year }}</h1>
+                <p class="car_detail"><span class="text-gray">Цвет:</span> {{ car.color }}</p>
+                <p class="car_detail"><span class="text-gray">Объем двигателя:</span> {{ car.engine_capacity }}</p>
+                <p class="car_detail"><span class="text-gray">Трансмиссия:</span> {{ car.transmission }}</p>
+                <p class="car_detail"><span class="text-gray">Длина:</span> {{ car.length }}</p>
+                <p class="car_detail"><span class="text-gray">Ширина:</span> {{ car.width }}</p>
+                <p class="car_detail"><span class="text-gray">Высота:</span> {{ car.height }}</p>
+                <p class="car_detail"><span class="text-gray">Клиренс:</span> {{ car.clearance }}</p>
             </div>
 
-            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <img src="#" alt="">
+            </div>
 
             <div class="col-md-2"></div>
 
@@ -23,3 +38,14 @@
     </div>
 
 {% endblock %}
+
+<!--    name_auto-->
+<!--	model_auto-->
+<!--	year-->
+<!--	color-->
+<!--	engine_capacity-->
+<!--	transmission-->
+<!--	length-->
+<!--	width-->
+<!--	height-->
+<!--	clearance-->

@@ -31,7 +31,18 @@
     padding-bottom: 100px;
 }
 
+#car_name_page{
+    padding: 15px 0;
+}
 
+.text-gray{
+    color: #757677;
+}
 
+.car_detail{
+    font-size: 1.3em;
+    line-height: 1;
+
+}
 
 
