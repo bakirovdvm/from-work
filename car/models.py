@@ -13,5 +13,9 @@ class Car(models.Model):
 	height = models.CharField(max_length=15)
 	clearance = models.CharField(max_length = 15)
 
+	class Meta():
+		verbose_name = 'Машина'
+		verbose_name_plural = 'Машины'
+
 	def __str__(self):
 		return (str(self.model_auto) + ' ' + str(self.year))
