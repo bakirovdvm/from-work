@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-2"></div>
 
-            <div class="col-md-4">
+            <div class="col-md-2">
                 <p class="car_detail"><span class="text-gray">Цвет:</span> {{ car.color }}</p>
                 <p class="car_detail"><span class="text-gray">Объем двигателя:</span> {{ car.engine_capacity }}</p>
                 <p class="car_detail"><span class="text-gray">Трансмиссия:</span> {{ car.transmission }}</p>
@@ -28,14 +28,14 @@
                 <p class="car_detail"><span class="text-gray">Клиренс:</span> {{ car.clearance }}</p>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-7">
                 <div class="container">
                     <div id="gallery">
                         {% if images %}
 
                             {% for im in images %}
                                 <figure class="photo">
-                                    <a href="{{ im.image.url }}"><img src="{{ im.image.url }}" alt="" width="400px"></a>
+                                    <a href="{{ im.image.url }}" data-lightbox="roadtrip" ><img src="{{ im.image.url }}" alt="" width="350px"></a>
                                 </figure>
                             {% endfor %}
 
@@ -46,7 +46,7 @@
                 </div>
             </div>
 
-            <div class="col-md-2"></div>
+            <div class="col-md-1"></div>
 
         </div>
     </div>
