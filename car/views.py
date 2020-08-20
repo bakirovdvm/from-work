@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import Http404, HttpResponseRedirect
 from django.http import HttpResponse
-from .models import Car
+from .models import Car, CarImage
 from .forms import CarForm
 
 # def car(request):
@@ -10,11 +10,14 @@ from .forms import CarForm
 def home(request):
     return render(request, ('car/home.html'))
 
+
 def css_animation(request):
     return render(request, ('car/css_animation.html'))
 
+
 def css_animation_ex(request):
     return render(request, ('car/css_animation_ex.html'))
+
 
 def car(request):
     cars = Car.objects.all()
@@ -30,13 +33,19 @@ def car(request):
 
     return render(request, ('car/car_add.html'), {'cars': cars, 'form': form, 'success': success})
 
+
 def car_detail(request, car_id):
     try:
         car = Car.objects.get(id=car_id)
     except:
         raise Http404("Машина не найдена...!")
 
-    return render(request, 'car/car_detail.html', {'car': car})
+    images = car.carimage_set.order_by('id')
+    #images = CarImage.objects.get(id=car_id)
+    #images = CarImage.objects.all()
+    #images = car.objects(id=car_id)
+
+    return render(request, 'car/car_detail.html', {'car': car, 'images': images})
 
 
 def car_table(request):

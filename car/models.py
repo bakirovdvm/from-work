@@ -15,9 +15,24 @@ class Car(models.Model):
 	height = models.CharField(max_length=15)
 	clearance = models.CharField(max_length=15)
 
+
 	class Meta():
 		verbose_name = 'Машина'
 		verbose_name_plural = 'Машины'
 
 	def __str__(self):
 		return (str(self.model_auto) + ' ' + str(self.year))
+
+
+class CarImage(models.Model):
+	car = models.ForeignKey(Car, on_delete=models.CASCADE)
+	image = models.ImageField(default='')
+	created = models.DateTimeField(auto_now_add=True, auto_now=False)
+	updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+
+	class Meta():
+		verbose_name = 'фотография'
+		verbose_name_plural = 'Фотографии'
+
+	def __str__(self):
+		return "%s" %self.id
